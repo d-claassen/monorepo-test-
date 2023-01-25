@@ -39,4 +39,4 @@ jobs:
 
             -
                 name: Changeset status
-                run: npx changeset
+                run: npx changeset status 
