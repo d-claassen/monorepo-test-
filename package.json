@@ -1,0 +1,9 @@
+{
+  "name": "@d-claassen/monorepo",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
