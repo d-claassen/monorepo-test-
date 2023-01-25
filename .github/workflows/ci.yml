@@ -40,4 +40,4 @@ jobs:
 
             -
                 name: Changeset status
-                run: yarn changeset status
+                run: yarn changeset
