@@ -1,0 +1,40 @@
+name: 'CI Monorepo '
+'on':
+    push:
+        branches:
+            - main
+    pull_request: null
+env:
+    key: cache-v0.1
+
+jobs:
+    yarn_install:
+        strategy:
+            fail-fast: false
+            matrix:
+                operating-system:
+                    - ubuntu-latest
+        runs-on: '${{ matrix.operating-system }}'
+        name: 'Building The App / ${{ matrix.operating-system }}'
+
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v3
+
+            -
+                name: Cache node_modules
+                uses: actions/cache@v3
+                id: yarn-cache-node-modules
+                with:
+                    path: node_modules
+                    key: ${{ runner.os }}-yarn-cache-node-modules-${{ hashFiles('**/yarn.lock') }}
+                    restore-keys: |
+                        ${{ runner.os }}-yarn-cache-node-modules-
+
+            - 
+                name: Yarn install
+                if: steps.yarn-cache-node-modules.outputs.cache-hit != 'true'
+                run: yarn install --immutable
+
+
