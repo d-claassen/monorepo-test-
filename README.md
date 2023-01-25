@@ -1,2 +1,3 @@
-# monorepo-test-
-Testing a Monorepo
+# monorepo-test
+
+Testing a Monorepo.
