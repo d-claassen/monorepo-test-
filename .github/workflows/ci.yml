@@ -48,4 +48,4 @@ jobs:
 
             -
                 name: Changeset status
-                run: git branch && npx changeset status 
+                run: git branch -vvv && npx changeset status 
