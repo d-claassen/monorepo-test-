@@ -1,8 +1,5 @@
-name: 'CI Monorepo '
+name: 'Changeset Check for PR'
 'on':
-    push:
-        branches:
-            - main
     pull_request: null
 env:
     key: cache-v0.1
