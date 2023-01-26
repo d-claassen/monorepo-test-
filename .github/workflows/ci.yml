@@ -20,7 +20,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - run: |
-                    git fetch --no-tags --depth=1 origin master
+                    git fetch --no-tags --depth=1 origin main
                     git checkout -b main
                     git checkout ${{ github.event.pull_request.head.sha }}
 
