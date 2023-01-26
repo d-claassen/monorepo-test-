@@ -18,10 +18,8 @@ jobs:
         name: 'Building The App / ${{ matrix.operating-system }}'
 
         steps:
-            -
-                name: Checkout
-                uses: actions/checkout@v3
-                run: |
+            - uses: actions/checkout@v3
+            - run: |
                     git fetch --no-tags --depth=1 origin master
                     git checkout -b main
                     git checkout ${{ github.event.pull_request.head.sha }}
