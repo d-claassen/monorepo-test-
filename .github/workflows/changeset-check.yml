@@ -19,18 +19,18 @@ jobs:
               name: Checkout
               uses: actions/checkout@v3
 
-            - 
-              name: Add target branch in repo 
+            -
+              name: Add target branch in repo
               run: |
                     git fetch --no-tags --depth=1 origin $GITHUB_BASE_REF
                     git checkout -b $GITHUB_BASE_REF
                     git checkout -
+                    git checkout -b blablabla
 
-            - 
+            -
                 name: Yarn install
                 run: yarn install --immutable
 
-
             -
                 name: Changeset status
-                run: npx changeset status --since=$GITHUB_BASE_REF
+                run: yarn changeset status --since=$GITHUB_BASE_REF
