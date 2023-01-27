@@ -6,7 +6,5 @@
       "packages/*"
     ]
   },
-  "devDependencies": {
-    "@changesets/cli": "^2.26.0"
-  }
+  "devDependencies": {}
 }
