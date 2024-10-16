@@ -3,5 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
     "@d-claassen/pkg-b": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@d-claassen/pkb-c": "^0.1.0"
   }
 }
