@@ -1,4 +1,7 @@
 {
   "name": "@d-claassen/pkg-c",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "@d-claassen/pkg-b": "^0.1.0"
+  }
 }
