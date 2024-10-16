@@ -2,7 +2,8 @@
   "name": "@d-claassen/monorepo",
   "private": true,
   "scripts": {
-    "graph": "nx graph"
+    "graph": "nx graph",
+    "version": "lerna version --conventional-commits --no-git-tag-version --no-push"
   },
   "workspaces": [
     "packages/*"
